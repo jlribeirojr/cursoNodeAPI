@@ -13,7 +13,7 @@ export const routerLoader = (app) => {
     const modulePath = path.join(modulesPath, dir);
 
     if (fs.statSync(modulePath).isDirectory()) {
-      const controllerPath = path.join(modulesPath, `${dir}.controller.js`);
+      const controllerPath = path.join(modulePath, `${dir}.controller.ts`);
 
       if (fs.existsSync(controllerPath)) {
         const controller = await import(controllerPath);
