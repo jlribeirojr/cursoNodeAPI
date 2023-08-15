@@ -1,10 +1,5 @@
-import { dir } from 'console';
 import fs from 'fs';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import path from 'path';
 
 export const routerLoader = (app) => {
   const modulesPath = path.join(__dirname, 'modules');

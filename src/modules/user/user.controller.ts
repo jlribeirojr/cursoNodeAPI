@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { creatUser, getUsers } from './user.service.js';
+import { creatUser, getUsers } from './user.service';
 
 const userRouter = Router();
 const router = Router();
@@ -14,6 +14,6 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const user = await creatUser(req.body);
   res.send(user);
-})
+});
 
 export default userRouter;
