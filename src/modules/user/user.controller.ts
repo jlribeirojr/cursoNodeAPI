@@ -14,9 +14,11 @@ router.get('/', async (_, res: Response): Promise<void> => {
 });
 
 router.post(
-  '/', async (req: Request<undefined, undefined, UserInsertDTO>, res: Response): Promise<void> => {
-  const user = await creatUser(req.body);
-  res.send(user);
-});
+  '/',
+  async (req: Request<undefined, undefined, UserInsertDTO>, res: Response): Promise<void> => {
+    const user = await creatUser(req.body);
+    res.send(user);
+  },
+);
 
 export default userRouter;
