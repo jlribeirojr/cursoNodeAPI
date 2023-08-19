@@ -4,7 +4,7 @@
   "description": "curso node",
   "main": "teste.js",
   "scripts": {
-    "dev": "npx ts-node-dev --respawn --inspect --ignore-watch node-modules src/app.ts",
+    "dev": "npx ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/app.ts",
     "start": "node src/app.ts",
     "lint:fix": "npx eslint ./src --ext .ts --fix",
     "lint:format": "npx prettier --loglevel warn --write \"./**/*.{js,ts}\" ",
