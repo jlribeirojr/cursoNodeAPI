@@ -7,7 +7,7 @@
     "dev": "npx ts-node-dev --respawn --inspect --ignore-watch node-modules src/app.ts",
     "start": "node src/app.ts",
     "lint:fix": "npx eslint ./src --ext .ts --fix",
-    "lint:format": "npx prettier --log-level warn --write \"./**/*.{js,ts}\" ",
+    "lint:format": "npx prettier --loglevel warn --write \"./**/*.{js,ts}\" ",
     "lint": "npm run lint:format && npm run lint:fix",
     "prisma:generate": "npx prisma generate",
     "prisma:migration": "npx prisma migrate dev"
