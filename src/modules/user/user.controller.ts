@@ -3,6 +3,7 @@ import { creatUser, getUsers } from './user.service';
 import * as core from 'express-serve-static-core';
 import { UserInsertDTO } from 'src/user/dtos/user-isert.dto';
 import { NotFoundException } from '@exceptions/not-found-exception';
+import { ReturnError } from '@exceptions/dtos/return-error.dto';
 
 const userRouter = Router();
 const router = Router();
@@ -14,7 +15,7 @@ router.get('/', async (_, res: Response): Promise<void> => {
     if (error instanceof NotFoundException) {
       res.status(204);
     } else {
-      res.status(500).send(error.message);
+      new ReturnError(res, error);
     }
   });
   res.send(users);
