@@ -2,9 +2,7 @@ import { Request, Response, Router } from 'express';
 import { AuthDTO } from './dtos/auth.dto';
 import { validateAuth } from './auth.service';
 import { ReturnError } from '@exceptions/dtos/return-error.dto';
-
 const authRouter = Router();
-
 const router = Router();
 
 authRouter.use('/auth', router);
