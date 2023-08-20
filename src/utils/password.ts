@@ -7,7 +7,7 @@ export const createPasswordHashed = async (password: string): Promise<string> =>
 
 export const validatePassword = async (
   password: string,
-  createPasswordHashed: string,
+  PasswordHashed: string,
 ): Promise<boolean> => {
   return compare(password, PasswordHashed);
 };
